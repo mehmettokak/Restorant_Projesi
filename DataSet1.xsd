@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="mhmt_rstrnt_uygConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="mhmt_rstrnt_uygConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Restorant_Projesi.Properties.Settings.GlobalReference.Default.mhmt_rstrnt_uygConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mhmt_rstrnt_uygConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        HESAPODEMELERI.H_O_ARATOPLAM, HESAPODEMELERI.H_O_KDVTUTARI, HESAPODEMELERI.H_O_INDIRIM, HESAPODEMELERI.H_O_TOPLAMTUTAR, 
+                         HESAPODEMELERI.H_O_TARIH, URUNLER.U_URUNAD, SATISLAR.SATIS_URUNID
+FROM            HESAPODEMELERI INNER JOIN
+                         SATISLAR ON HESAPODEMELERI.H_O_ADISYONID = SATISLAR.SATIS_ADISYONID INNER JOIN
+                         URUNLER ON SATISLAR.SATIS_URUNID = URUNLER.ID INNER JOIN
+                         ADISYON ON HESAPODEMELERI.H_O_ADISYONID = ADISYON.ID AND SATISLAR.SATIS_ADISYONID = ADISYON.ID
+WHERE        (31 &gt;= DATEDIFF(dd, HESAPODEMELERI.H_O_TARIH, GETDATE()))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="H_O_ARATOPLAM" DataSetColumn="H_O_ARATOPLAM" />
+              <Mapping SourceColumn="H_O_KDVTUTARI" DataSetColumn="H_O_KDVTUTARI" />
+              <Mapping SourceColumn="H_O_INDIRIM" DataSetColumn="H_O_INDIRIM" />
+              <Mapping SourceColumn="H_O_TOPLAMTUTAR" DataSetColumn="H_O_TOPLAMTUTAR" />
+              <Mapping SourceColumn="H_O_TARIH" DataSetColumn="H_O_TARIH" />
+              <Mapping SourceColumn="U_URUNAD" DataSetColumn="U_URUNAD" />
+              <Mapping SourceColumn="SATIS_URUNID" DataSetColumn="SATIS_URUNID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable2TableAdapter" GeneratorDataComponentClassName="DataTable2TableAdapter" Name="DataTable2" UserDataComponentName="DataTable2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mhmt_rstrnt_uygConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        HESAPODEMELERI.H_O_ARATOPLAM, HESAPODEMELERI.H_O_KDVTUTARI, HESAPODEMELERI.H_O_INDIRIM, HESAPODEMELERI.H_O_TOPLAMTUTAR, 
+                         HESAPODEMELERI.H_O_TARIH, URUNLER.U_URUNAD, SATISLAR.SATIS_URUNID
+FROM            HESAPODEMELERI INNER JOIN
+                         SATISLAR ON HESAPODEMELERI.H_O_ADISYONID = SATISLAR.SATIS_ADISYONID INNER JOIN
+                         URUNLER ON SATISLAR.SATIS_URUNID = URUNLER.ID INNER JOIN
+                         ADISYON ON HESAPODEMELERI.H_O_ADISYONID = ADISYON.ID AND SATISLAR.SATIS_ADISYONID = ADISYON.ID
+WHERE        (1 &gt;= DATEDIFF(dd, HESAPODEMELERI.H_O_TARIH, GETDATE()))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="H_O_ARATOPLAM" DataSetColumn="H_O_ARATOPLAM" />
+              <Mapping SourceColumn="H_O_KDVTUTARI" DataSetColumn="H_O_KDVTUTARI" />
+              <Mapping SourceColumn="H_O_INDIRIM" DataSetColumn="H_O_INDIRIM" />
+              <Mapping SourceColumn="H_O_TOPLAMTUTAR" DataSetColumn="H_O_TOPLAMTUTAR" />
+              <Mapping SourceColumn="H_O_TARIH" DataSetColumn="H_O_TARIH" />
+              <Mapping SourceColumn="U_URUNAD" DataSetColumn="U_URUNAD" />
+              <Mapping SourceColumn="SATIS_URUNID" DataSetColumn="SATIS_URUNID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="H_O_ARATOPLAM" msprop:Generator_ColumnVarNameInTable="columnH_O_ARATOPLAM" msprop:Generator_ColumnPropNameInRow="H_O_ARATOPLAM" msprop:Generator_ColumnPropNameInTable="H_O_ARATOPLAMColumn" msprop:Generator_UserColumnName="H_O_ARATOPLAM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="H_O_KDVTUTARI" msprop:Generator_ColumnVarNameInTable="columnH_O_KDVTUTARI" msprop:Generator_ColumnPropNameInRow="H_O_KDVTUTARI" msprop:Generator_ColumnPropNameInTable="H_O_KDVTUTARIColumn" msprop:Generator_UserColumnName="H_O_KDVTUTARI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="H_O_INDIRIM" msprop:Generator_ColumnVarNameInTable="columnH_O_INDIRIM" msprop:Generator_ColumnPropNameInRow="H_O_INDIRIM" msprop:Generator_ColumnPropNameInTable="H_O_INDIRIMColumn" msprop:Generator_UserColumnName="H_O_INDIRIM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="H_O_TOPLAMTUTAR" msprop:Generator_ColumnVarNameInTable="columnH_O_TOPLAMTUTAR" msprop:Generator_ColumnPropNameInRow="H_O_TOPLAMTUTAR" msprop:Generator_ColumnPropNameInTable="H_O_TOPLAMTUTARColumn" msprop:Generator_UserColumnName="H_O_TOPLAMTUTAR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="H_O_TARIH" msprop:Generator_ColumnVarNameInTable="columnH_O_TARIH" msprop:Generator_ColumnPropNameInRow="H_O_TARIH" msprop:Generator_ColumnPropNameInTable="H_O_TARIHColumn" msprop:Generator_UserColumnName="H_O_TARIH" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="U_URUNAD" msprop:Generator_ColumnVarNameInTable="columnU_URUNAD" msprop:Generator_ColumnPropNameInRow="U_URUNAD" msprop:Generator_ColumnPropNameInTable="U_URUNADColumn" msprop:Generator_UserColumnName="U_URUNAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SATIS_URUNID" msprop:Generator_ColumnVarNameInTable="columnSATIS_URUNID" msprop:Generator_ColumnPropNameInRow="SATIS_URUNID" msprop:Generator_ColumnPropNameInTable="SATIS_URUNIDColumn" msprop:Generator_UserColumnName="SATIS_URUNID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable2" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_RowClassName="DataTable2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="H_O_ARATOPLAM" msprop:Generator_ColumnVarNameInTable="columnH_O_ARATOPLAM" msprop:Generator_ColumnPropNameInRow="H_O_ARATOPLAM" msprop:Generator_ColumnPropNameInTable="H_O_ARATOPLAMColumn" msprop:Generator_UserColumnName="H_O_ARATOPLAM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="H_O_KDVTUTARI" msprop:Generator_ColumnVarNameInTable="columnH_O_KDVTUTARI" msprop:Generator_ColumnPropNameInRow="H_O_KDVTUTARI" msprop:Generator_ColumnPropNameInTable="H_O_KDVTUTARIColumn" msprop:Generator_UserColumnName="H_O_KDVTUTARI" type="xs:decimal" minOccurs="0" />
+              <xs:element name="H_O_INDIRIM" msprop:Generator_ColumnVarNameInTable="columnH_O_INDIRIM" msprop:Generator_ColumnPropNameInRow="H_O_INDIRIM" msprop:Generator_ColumnPropNameInTable="H_O_INDIRIMColumn" msprop:Generator_UserColumnName="H_O_INDIRIM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="H_O_TOPLAMTUTAR" msprop:Generator_ColumnVarNameInTable="columnH_O_TOPLAMTUTAR" msprop:Generator_ColumnPropNameInRow="H_O_TOPLAMTUTAR" msprop:Generator_ColumnPropNameInTable="H_O_TOPLAMTUTARColumn" msprop:Generator_UserColumnName="H_O_TOPLAMTUTAR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="H_O_TARIH" msprop:Generator_ColumnVarNameInTable="columnH_O_TARIH" msprop:Generator_ColumnPropNameInRow="H_O_TARIH" msprop:Generator_ColumnPropNameInTable="H_O_TARIHColumn" msprop:Generator_UserColumnName="H_O_TARIH" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="U_URUNAD" msprop:Generator_ColumnVarNameInTable="columnU_URUNAD" msprop:Generator_ColumnPropNameInRow="U_URUNAD" msprop:Generator_ColumnPropNameInTable="U_URUNADColumn" msprop:Generator_UserColumnName="U_URUNAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SATIS_URUNID" msprop:Generator_ColumnVarNameInTable="columnSATIS_URUNID" msprop:Generator_ColumnPropNameInRow="SATIS_URUNID" msprop:Generator_ColumnPropNameInTable="SATIS_URUNIDColumn" msprop:Generator_UserColumnName="SATIS_URUNID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
